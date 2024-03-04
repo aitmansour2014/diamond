@@ -1,0 +1,16 @@
+<ng-container *ngIf="isMobileView; then mobileNavbar else desktopNavbar"></ng-container>
+
+<ng-template #desktopNavbar>
+  <app-desk-nav-bar></app-desk-nav-bar>
+ <!-- <app-home></app-home>
+ <app-hostesse></app-hostesse> -->
+</ng-template>
+
+<ng-template #mobileNavbar>
+  <!-- <app-mobile-nav></app-mobile-nav> 
+  <app-home></app-home>
+  <app-hostesse></app-hostesse> -->
+</ng-template>
+
+
+

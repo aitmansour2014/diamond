@@ -1,0 +1,20 @@
+<div class="navbar">
+    <div class=" container" style="max-width: 1000px;">
+      <a class="button-48"  href="#home">Home</a>
+    <a class="button-48" href="#booking">Booking</a>
+    <a class="button-48" href="#agency">Agency</a>
+    <img [src]="logoSrc" alt="Website Logo" class="logo">
+    
+    <a class="button-48" href="#contact">Contact</a>
+    <a class="button-48" href="javascript:void(0);" class="icon" (click)="toggleMenu()" *ngIf="isMobileView">&#9776;</a>
+    <a class="button-48" href="#" class="nav-link  ">login</a>
+    <a  class="button-48" href="#agency">langauge</a>
+    </div>
+    
+   
+  </div>
+  
+  <div class="hostess-container">
+    <a class="button-48" href="#agency" class="hostess-Hostesse">Become Hostesses</a>
+  </div>
+  <router-outlet></router-outlet>
