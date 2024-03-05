@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { DeskNavBarComponent } from './desk-nav-bar.component';
+import { DeskNavComponent } from './desk-nav.component';
 
-describe('DeskNavBarComponent', () => {
-  let component: DeskNavBarComponent;
-  let fixture: ComponentFixture<DeskNavBarComponent>;
+describe('DeskNavComponent', () => {
+  let component: DeskNavComponent;
+  let fixture: ComponentFixture<DeskNavComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [DeskNavBarComponent]
+      imports: [DeskNavComponent]
     })
     .compileComponents();
     
-    fixture = TestBed.createComponent(DeskNavBarComponent);
+    fixture = TestBed.createComponent(DeskNavComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

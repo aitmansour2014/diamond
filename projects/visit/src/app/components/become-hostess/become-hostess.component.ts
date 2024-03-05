@@ -8,5 +8,5 @@ import { Component } from '@angular/core';
   styleUrl: './become-hostess.component.css'
 })
 export class BecomeHostessComponent {
-
+  imghost: string = 'assets/hostesseimg.jpg';
 }

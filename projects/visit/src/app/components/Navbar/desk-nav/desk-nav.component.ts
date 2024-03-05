@@ -1,15 +1,16 @@
-import { CommonModule } from '@angular/common';
 import { Component, HostListener } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { SharedModuleModule } from '../../../shared-module/shared-module.module';
+import { NgIf } from '@angular/common';
+import { RouterModule } from '@angular/router';
 
 @Component({
-  selector: 'app-desk-nav-bar',
+  selector: 'app-desk-nav',
   standalone: true,
-  imports: [RouterOutlet,CommonModule,],
-  templateUrl: './desk-nav-bar.component.html',
-  styleUrl: './desk-nav-bar.component.css'
+  imports: [ SharedModuleModule, NgIf, RouterModule],
+  templateUrl: './desk-nav.component.html',
+  styleUrl: './desk-nav.component.css'
 })
-export class DeskNavBarComponent {
+export class DeskNavComponent {
   logoSrc: string = 'assets/logo.png';
   menuOpen: boolean = false;
   isMobileView: boolean = false;
@@ -30,6 +31,6 @@ export class DeskNavBarComponent {
   }
 
   private checkIfMobile() {
-    this.isMobileView = window.innerWidth <= 800;
+    this.isMobileView = window.innerWidth <= 600;
   }
 }
