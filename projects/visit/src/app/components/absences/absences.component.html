@@ -1,0 +1,22 @@
+<!-- absences.component.html -->
+<div class=" container text-center" style="background-color: #4F4B36;max-width: 1000px;" >
+<div>
+    <h2 class="text-white">Liste des absences</h2>
+    <ul>
+      <li *ngFor="let absence of absences; let i = index" class="text-white">
+        {{ absence.dateStart }} - {{ absence.dateEnd  }}
+        <button (click)="supprimerAbsence(i)">Supprimer</button>
+      </li>
+    </ul>
+  
+    <h2 class="text-white">Ajouter une Absence</h2>
+    
+      <input type="datetime-local" #dateDebut required>
+      <input type="datetime-local" #dateFin required>
+      <button class="text-white" (click)="ajouterAbsence(dateDebut.value, dateFin.value)">Ajouter</button>
+    
+  </div>
+  <!-- disponibilites.component.html -->
+  <div class="text-white" id='calendar'></div>
+</div>
+
