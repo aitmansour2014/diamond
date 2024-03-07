@@ -128,5 +128,54 @@
           </div>
        
       </div>
+      
+    <h1 class="text-lg-start mt-4 mb-0 text-white">Images</h1>
+  
+    <hr class="mt-2 mb-5">
+  
+    <div class="row text-center text-lg-start">
+  
+        <div class="col-lg-3 col-md-4 col-6" >
+            <a href="#" class="d-block mb-4 h-100">
+                <img class="img-fluid img-thumbnail" src="https://islamonline.net/wp-content/uploads/2022/04/%D8%B1%D9%85%D8%B6%D8%A7%D9%86-%D9%83%D8%B1%D9%8A%D9%85-600x330.jpg" style="width: 100%; height: auto; max-width: 400px; max-height: 200px;" alt="">
+            </a>
+          </div>
+  
+          <div class="col-lg-3 col-md-4 col-6" >
+              <a href="#" class="d-block mb-4 h-100">
+                  <img class="img-fluid img-thumbnail" src="https://newsnetwork.mayoclinic.org/n7-mcnn/05df5ffa62227057/uploads/sites/2/2023/03/An-open-Quran-rests-next-to-a-bowl-of-dates-and-a-decorated-lantern_GettyImages-1368465583.jpg" style="width: 100%; height: auto; max-width: 400px; max-height: 200px;" alt="">
+              </a>
+            </div>
+  
+            <div class="col-lg-3 col-md-4 col-6" >
+                <a href="#" class="d-block mb-4 h-100">
+                    <img class="img-fluid img-thumbnail" src="https://img.medi1news.com/vis_0307202314400705.jpg" style="width: 100%; height: auto; max-width: 400px; max-height: 200px;" alt="">
+                </a>
+              </div>
+  
+              <div class="col-lg-3 col-md-4 col-6" >
+                  <a href="#" class="d-block mb-4 h-100">
+                      <img class="img-fluid img-thumbnail" src="https://islamonline.net/wp-content/uploads/2022/04/%D8%B1%D9%85%D8%B6%D8%A7%D9%86-%D9%83%D8%B1%D9%8A%D9%85-600x330.jpg" style="width: 100%; height: auto; max-width: 400px; max-height: 200px;" alt="">
+                  </a>
+                </div>
+  
+                <div class="col-lg-3 col-md-4 col-6" >
+                    <a href="#" class="d-block mb-4 h-100">
+                        <img class="img-fluid img-thumbnail" src="https://islamonline.net/wp-content/uploads/2022/04/%D8%B1%D9%85%D8%B6%D8%A7%D9%86-%D9%83%D8%B1%D9%8A%D9%85-600x330.jpg" style="width: 100%; height: auto; max-width: 400px; max-height: 200px;" alt="">
+                    </a>
+                  </div>
+        <div class="col-lg-3 col-md-4 col-6" *ngIf="imageUrl">
+            <a href="#" class="d-block mb-4 h-100">
+                <img class="img-fluid img-thumbnail"  [src]="imageUrl" alt="" *ngIf="imageUrl" style="width: 100%; height: auto; max-width: 400px; max-height: 200px;" alt="">
+            </a>
+          </div>
+        <div class="col-lg-3 col-md-4 col-6" >
+            <label for="selectFile" class="d-block mb-4 h-100">
+              <img   class="img-fluid img-thumbnail"  src="https://th.bing.com/th/id/OIP.jtst5ep_OqIJ8PZ2yBTMgQHaHa?pid=ImgDet&w=474&h=474&rs=1" style="width: 100%; height: auto; max-width: 400px; max-height: 200px;" alt="">
+            </label>
+          <input type="file" id="selectFile" (change)="selectImage($event)" hidden class="form-control">
+        </div>
+  
+      
     </div>
     

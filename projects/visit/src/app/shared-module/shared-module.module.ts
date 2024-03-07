@@ -18,6 +18,7 @@ import {MatTableModule} from '@angular/material/table';
 import {MatDatepickerModule} from '@angular/material/datepicker';
 import {MatNativeDateModule} from '@angular/material/core';
 import { FullCalendarModule } from '@fullcalendar/angular';
+import {MatStepperModule} from '@angular/material/stepper';
 
 
 @NgModule({
@@ -41,6 +42,7 @@ import { FullCalendarModule } from '@fullcalendar/angular';
     MatDatepickerModule,
     MatSortModule,
     MatTableModule,
+    MatStepperModule,
     FullCalendarModule
   ],
   exports: [
@@ -62,6 +64,7 @@ import { FullCalendarModule } from '@fullcalendar/angular';
     MatDatepickerModule,
     MatSortModule,
     MatTableModule,
+    MatStepperModule,
     FullCalendarModule
   ],
 })
