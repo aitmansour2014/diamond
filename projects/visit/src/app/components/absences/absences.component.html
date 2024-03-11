@@ -1,0 +1,63 @@
+<!-- absences.component.html -->
+<div class=" container text-center" style="background-color: #4F4B36;max-width: 1000px;" >
+  <div class="d-flex justify-content-between">
+    <div class="card ms-3 mt-3" style="width: 48%;">
+      <div class="card-header">Ajouter une Absence</div>
+      <div class="card-body">
+        
+        <p class="card-text">
+          <mat-form-field>
+            <mat-label>Catégorie de l'absence</mat-label>
+            <mat-select  #categorie>
+              @for (categorie of categorieAbbsence; track categorie) {
+                <mat-option [value]="categorie.value">{{categorie.viewValue}}</mat-option>
+              }
+            </mat-select>
+          </mat-form-field>
+        </p>
+        <p class="card-text">
+          <mat-form-field class="example-full-width">
+            <mat-label>Raison</mat-label>
+            <input matInput placeholder="Meeting" #raison>
+          </mat-form-field>
+        </p>
+        <h2 class="card-title my-3" >Date de début</h2>
+        <p class="card-text">
+          
+          <input type="datetime-local" #dateDebut required></p>
+          
+        <h2 class="card-title my-3" >Date de Fin</h2>
+          <p class="card-text">
+            
+            <input type="datetime-local" #dateFin required></p>
+    
+        <a  (click)="ajouterAbsence(dateDebut.value, dateFin.value, raison.value , categorie.value)" class="btn btn-primary my-3">Ajouter</a>
+      </div>
+    
+    
+    </div>
+    <div class="card col-5 me-3 mt-3" style="width: 48%;" >
+      <div class="card-header">Liste des absences</div>
+      <div class="card-body " style="overflow-y: scroll; height:400px;">
+        <ul  >
+          <li class="card-text" *ngFor="let absence of absences; let i = index" >
+           De : {{ convertDateFormat(absence.dateStart) }} à {{ convertDateFormat(absence.dateEnd)  }}
+            <button class="btn btn-outline-danger m-3 btn-sm p-2" (click)="supprimerAbsence(i)">
+              <i class="bi bi-trash">X</i> 
+            </button> 
+          </li>
+        </ul>
+      
+      </div></div>
+
+    
+  </div>
+  <!-- disponibilites.component.html -->
+  <div class="card m-3 " >
+    <div class="card-header">Calendrier des absences</div>
+    <div class="card-body">
+      <div  id='calendar'></div>
+    </div></div>
+  
+</div>
+

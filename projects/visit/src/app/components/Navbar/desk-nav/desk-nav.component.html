@@ -1,7 +1,7 @@
 <div class="navbar">
     <div class=" container" style="max-width: 1000px;">
-      <a class="button-48"  href="#home">Home</a>
-    <a class="button-48" href="#booking">Booking</a>
+      <a class="button-48" routerLink="/home">Home</a>
+    <a class="button-48" routerLink="/agency">Booking</a>
     <a class="button-48" href="#agency">Agency</a>
     <img [src]="logoSrc" alt="Website Logo" class="logo">
     
@@ -16,5 +16,6 @@
   
   <div class="hostess-container">
     <a class="button-48" href="#agency" class="hostess-Hostesse">Become Hostesses</a>
+    
   </div>
   <router-outlet></router-outlet>

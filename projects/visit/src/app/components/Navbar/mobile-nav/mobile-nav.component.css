@@ -1,0 +1,48 @@
+.navbar {
+    background-color: black;
+    text-align: center;
+    position: relative;
+  }
+  
+  .logo {
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+    left: 50%;
+        transform: translateX(-50%);
+    width:30vw ;
+  }
+  
+  .icon {
+    color: #BFB274;
+    font-size: 24px;
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+  }
+  
+  .menu {
+    display: none;
+    background-color: black;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+  }
+  
+  .menu.show {
+    display: block;
+  }
+  
+  .menu a {
+    color:#BFB274;
+    text-decoration: none;
+    display: block;
+    padding: 14px 20px;
+  }
+  
+  .menu a:hover {
+    background-color: grey;
+  }
+  

@@ -25,6 +25,7 @@
               "projects/visit/src/assets"
             ],
             "styles": [
+              "projects/visit/src/custom-theme.scss",
               "projects/visit/src/styles.css"
             ],
             "scripts": []

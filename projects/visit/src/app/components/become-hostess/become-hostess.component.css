@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Subrayada:wght@400;700&display=swap');
+.title {
+    font-family: 'Montserrat Subrayada', sans-serif;
+    font-size: 1.5rem; /* Adjust the font-size as needed */
+    font-weight: 700; /* Use 700 for bold */
+  }
+  .titleh2 {
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-size: 1.5rem; /* Adjust the font-size as needed */
+    font-weight: 500; /* Use 700 for bold */
+    color: #BFB274;
+  }
+  .titleh3 {
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-size: 1.3rem; /* Adjust the font-size as needed */
+    font-weight: 400; /* Use 700 for bold */
+    color: #BFB274;
+    margin-bottom: 10px;
+  }
+  .mylabel{
+    color: #BFB274;
+    margin-bottom: 5px;
+  }

@@ -1,0 +1,119 @@
+/* navbar.component.css */
+#sidebar {
+    height: 100%;
+    width: 250px;
+    position: fixed;
+    top: 0;
+    left: -250px;
+    background-color: #111;
+    transition: all 0.3s;
+  }
+  
+  #sidebar.active {
+    left: 0;
+  }
+  
+  #sidebar .sidebar-header {
+    padding: 20px;
+    background: #111;
+  }
+  
+  #sidebar ul.components {
+    padding: 20px 0;
+    border-bottom: 1px solid #47748b;
+  }
+  
+  #sidebar ul p {
+    padding: 10px;
+    font-size: 1.1em;
+    display: block;
+  }
+ 
+  #sidebar ul li a {
+   
+    padding: 10px;
+    font-size: 1.1em;
+    display: block;
+    
+  }
+  
+  #sidebar ul li a:hover {
+    color: black;
+    background: #f7dba1;
+    text-decoration: none;
+  }
+  
+  #sidebarCollapse {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 10px;
+    left: 10px; /* Adjusted from right: 10px */
+    color: #D8CD9B;
+    cursor: pointer;
+  }
+  
+  
+  #sidebarCollapse span {
+    margin-left: -10px;
+  }
+  
+  .linkbar {
+    appearance: none;
+    background-color: #16161613;
+    border-width: 0;
+    box-sizing: border-box;
+    color: #D8CD9B;
+    cursor: pointer;
+    display: inline-block;
+    font-family: Clarkson,Helvetica,sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 0;
+    line-height: 1em;
+    margin: 0;
+    opacity: 1;
+    outline: 0;
+    padding: 1.5em 2.2em;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    text-rendering: geometricprecision;
+    text-transform: uppercase;
+    transition: opacity 300ms cubic-bezier(.694, 0, 0.335, 1),background-color 100ms cubic-bezier(.694, 0, 0.335, 1),color 100ms cubic-bezier(.694, 0, 0.335, 1);
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    vertical-align: baseline;
+    white-space: nowrap;
+  }
+  
+  .linkbar:before {
+    animation: opacityFallbackOut .5s step-end forwards;
+    backface-visibility: hidden;
+    background-color: #bfb27467;
+    
+    clip-path: polygon(-1% 0, 0 0, -25% 100%, -1% 100%);
+    content: "";
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    transform: translateZ(0);
+    transition: clip-path .5s cubic-bezier(.165, 0.84, 0.44, 1), -webkit-clip-path .5s cubic-bezier(.165, 0.84, 0.44, 1);
+    width: 100%;
+  }
+  
+  .linkbar:hover:before {
+    animation: opacityFallbackIn 0s step-start forwards;
+    clip-path: polygon(0 0, 101% 0, 101% 101%, 0 101%);
+  }
+  
+  .linkbar:after {
+    background-color: #FFFFFF;
+  }
+  
+  .linkbar span {
+    z-index: 1;
+    position: relative;
+  }

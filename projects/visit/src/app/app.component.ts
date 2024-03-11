@@ -1,13 +1,15 @@
-import { CommonModule } from '@angular/common';
-import { Component, HostListener } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
-import { DeskNavBarComponent } from './components/desk-nav-bar/desk-nav-bar.component';
+import { Component ,OnInit,HostListener, NgModule} from '@angular/core';
+import { BecomeHostessComponent } from './components/become-hostess/become-hostess.component';
+import { MobileNavComponent } from './components/Navbar/mobile-nav/mobile-nav.component';
+import { DeskNavComponent } from './components/Navbar/desk-nav/desk-nav.component';
+import { SharedModuleModule } from './shared-module/shared-module.module';
+import { NgIf } from '@angular/common';
 
 @Component({
   selector: 'app-root',
-  standalone: true,
-  imports: [RouterOutlet, CommonModule, DeskNavBarComponent],
   templateUrl: './app.component.html',
+  standalone: true,
+  imports:[BecomeHostessComponent, MobileNavComponent,DeskNavComponent, SharedModuleModule, NgIf],
   styleUrl: './app.component.css'
 })
 export class AppComponent {
@@ -32,6 +34,6 @@ export class AppComponent {
   }
 
   private checkIfMobile() {
-    this.isMobileView = window.innerWidth <= 800;
+    this.isMobileView = window.innerWidth <= 600;
   }
 }
