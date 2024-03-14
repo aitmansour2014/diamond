@@ -1,1 +1,68 @@
-<p>booking works!</p>
+<div class=" container text-center" style="background-color: #4F4B36;max-width: 1000px;" >
+    <div class="bg-black text-white  card rounded-0 ">
+        <div class="card-title mt-3 mb-2 text-center" style="width: 100%;" >
+          <h1 class="title  " style="color:#BFB274 ;">Your career as a model and trade fair hostess</h1>
+    
+        
+        </div>
+        <div class="card-body text-center m-3" >
+            <p class="card-text text-center" >Do you have an open and communicative personality and want to showcase your charm? If you are looking for an attractive earning opportunity or a varied part-time job, then Diamonds Model Agency is the right place for you.</p>
+        </div>
+      </div>
+      
+    <mat-stepper orientation="horizontal" style=" background-color: transparent !important; ">
+    <mat-step>
+    
+    
+        <ng-template matStepLabel ></ng-template>
+        <ng-template matStepperIcon aria-selected="true" ><span style="color: #BFB274;">Personal Info</span></ng-template>
+      <ng-template matStepContent>
+      
+           
+                
+            
+                           
+                            <div class="mb-3 ">
+                                <div class="form-content">
+                                    <div class="form-items">
+                                <div class="row">
+                                        <h3>Book now</h3>
+                                        <p>Fill in the data below.</p>
+                                    <div class="col-md-6">
+                                        <div class="form__group field">
+                                            <input type="input" class="form__field" placeholder="first name" name="first name" id='first name' required />
+                                            <label for="first name" class="form__label">first name</label>
+                                          </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form__group field">
+                                            <input type="input" class="form__field" placeholder="last name" name="last name" id='last name' required />
+                                            <label for="last name" class="form__label">last name</label>
+                                          </div>
+                                    </div>
+                                </div>
+                                </div>
+                                </div>
+                              </div>
+                    
+         
+      
+    
+        <button mat-button matStepperNext>Next</button>
+      </ng-template>
+    </mat-step>
+    <mat-step >
+      <ng-template aria-selected="true" matStepLabel>Step 2</ng-template>
+      <ng-template matStepContent>
+        <p>This content was also rendered lazily</p>
+        <button mat-button matStepperPrevious>Back</button>
+        <button mat-button matStepperNext>Next</button>
+      </ng-template>
+    </mat-step>
+    <mat-step>
+      <ng-template matStepLabel matStepperIcon aria-selected="true">Step 3</ng-template>
+      <p>This content was rendered eagerly</p>
+      <button mat-button matStepperPrevious>Back</button>
+    </mat-step>
+  </mat-stepper>
+</div>

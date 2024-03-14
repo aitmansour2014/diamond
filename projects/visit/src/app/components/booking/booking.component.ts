@@ -1,9 +1,11 @@
 import { Component } from '@angular/core';
+import { SharedModuleModule } from '../../shared-module/shared-module.module';
+import { MatIconModule } from '@angular/material/icon';
 
 @Component({
   selector: 'app-booking',
   standalone: true,
-  imports: [],
+  imports: [SharedModuleModule, MatIconModule],
   templateUrl: './booking.component.html',
   styleUrl: './booking.component.css'
 })
