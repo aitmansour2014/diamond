@@ -11,4 +11,9 @@ import { MatIconModule } from '@angular/material/icon';
 })
 export class BookingComponent {
 
+stepOneSelected: boolean = true;
+constructor(){}
+firstNext(){
+ 
+}
 }

@@ -10,12 +10,13 @@
         </div>
       </div>
       
-    <mat-stepper orientation="horizontal" style=" background-color: transparent !important; ">
-    <mat-step>
+    <mat-stepper orientation="horizontal"  linear #stepper  style=" background-color: transparent !important; ">
+    <mat-step [completed]="true" >
     
     
-        <ng-template matStepLabel ></ng-template>
-        <ng-template matStepperIcon aria-selected="true" ><span style="color: #BFB274;">Personal Info</span></ng-template>
+       
+        <ng-template matStepLabel aria-selected="true" ><span [style.color]="stepper.selectedIndex == 0 ? '#fff' : '#BFB274'"
+          >Personal Info </span></ng-template>
       <ng-template matStepContent>
       
            
@@ -23,11 +24,13 @@
             
                            
                             <div class="mb-3 ">
-                                <div class="form-content">
-                                    <div class="form-items">
+                            
                                 <div class="row">
-                                        <h3>Book now</h3>
-                                        <p>Fill in the data below.</p>
+                        <div class="form-content"><h3>Book now</h3>
+                          <p>Fill in the data below.</p>
+                        </div>
+                                        
+                                      
                                     <div class="col-md-6">
                                         <div class="form__group field">
                                             <input type="input" class="form__field" placeholder="first name" name="first name" id='first name' required />
@@ -40,27 +43,26 @@
                                             <label for="last name" class="form__label">last name</label>
                                           </div>
                                     </div>
-                                </div>
-                                </div>
+
                                 </div>
                               </div>
                     
          
       
     
-        <button mat-button matStepperNext>Next</button>
+        <button mat-button matStepperNext (click)="firstNext()">Next</button>
       </ng-template>
     </mat-step>
-    <mat-step >
-      <ng-template aria-selected="true" matStepLabel>Step 2</ng-template>
+    <mat-step [completed]="false">
+      <ng-template aria-selected="true" matStepLabel><span [style.color]="stepper.selectedIndex == 1 ? '#fff' : '#BFB274'">Step 2 </span></ng-template>
       <ng-template matStepContent>
         <p>This content was also rendered lazily</p>
         <button mat-button matStepperPrevious>Back</button>
         <button mat-button matStepperNext>Next</button>
       </ng-template>
     </mat-step>
-    <mat-step>
-      <ng-template matStepLabel matStepperIcon aria-selected="true">Step 3</ng-template>
+    <mat-step [completed]="false">
+      <ng-template matStepLabel matStepperIcon aria-selected="true"> <span [style.color]="stepper.selectedIndex == 2 ? '#fff' : '#BFB274'">Step 3   </span></ng-template>
       <p>This content was rendered eagerly</p>
       <button mat-button matStepperPrevious>Back</button>
     </mat-step>

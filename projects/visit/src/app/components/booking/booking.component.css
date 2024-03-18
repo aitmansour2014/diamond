@@ -45,9 +45,9 @@
 
 .mat-step-icon {
     border-radius: 50%;
-    height: 50px;
-    width: 50px;
-    flex-shrink: 0;
+    height: 100px;
+    width: 100px;
+    
     position: relative;
     color: var(--mat-stepper-header-icon-foreground-color);
     background-color: var(--mat-stepper-header-icon-background-color);
