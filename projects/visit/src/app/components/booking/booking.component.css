@@ -33,15 +33,29 @@
     line-height: 20px;
     margin-bottom: 30px;
 }
-::ng-deep .mat-step-header[aria-selected="true"]  {
-    /* background-color: #BFB274; */
+ /* ::ng-deep .mat-step-header[aria-selected="true"]  {
+     background-color: #6e6848; 
     border-radius: 32px;
     width: 60%;
     font-weight: 22px;
     height: auto;
     
+  }  */
+
+  ::ng-deep .mat-horizontal-stepper-header[aria-selected="true"] {
+    background-color: #6e6848 !important;
+    border-radius: 32px !important;
+    width: 60%;
+    font-weight: 22px;
+    height: auto;
+}
+
+
+  .mat-step-icon .mat-icon {
+    font-size: 27px;
+    height: 27px;
+    width: 27px;
   }
- 
 
 /* .mat-step-icon {
     border-radius: 50%;

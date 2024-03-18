@@ -11,11 +11,10 @@
       </div>
       
     <mat-stepper orientation="horizontal"  linear #stepper  style=" background-color: transparent !important; ">
-    <mat-step [completed]="true" >
+    <mat-step [completed]="true" aria-selected="true" >
     
     
-        <ng-template matStepLabel aria-selected="true" ><span [style.color]="stepper.selectedIndex == 0 ? '#fff' : '#BFB274'"
-          >Personal Info </span></ng-template>
+        <ng-template matStepLabel  ><span [style.color]="stepper.selectedIndex == 0 ? '#fff' : '#BFB274'">Personal Info </span></ng-template>
       <ng-template matStepContent>
       
            
@@ -52,16 +51,16 @@
         <button mat-button matStepperNext (click)="firstNext()">Next</button>
       </ng-template>
     </mat-step>
-    <mat-step [completed]="false">
-      <ng-template aria-selected="true" matStepLabel><span [style.color]="stepper.selectedIndex == 1 ? '#fff' : '#BFB274'">Step 2 </span></ng-template>
+    <mat-step [completed]="false" aria-selected="true">
+      <ng-template matStepLabel><span [style.color]="stepper.selectedIndex == 1 ? '#fff' : '#BFB274'">Step 2 </span></ng-template>
       <ng-template matStepContent>
         <p>This content was also rendered lazily</p>
         <button mat-button matStepperPrevious>Back</button>
         <button mat-button matStepperNext>Next</button>
       </ng-template>
     </mat-step>
-    <mat-step [completed]="false">
-      <ng-template matStepLabel matStepperIcon aria-selected="true"> <span [style.color]="stepper.selectedIndex == 2 ? '#fff' : '#BFB274'">Step 3   </span></ng-template>
+    <mat-step [completed]="false" aria-selected="true">
+      <ng-template matStepLabel matStepperIcon > <span [style.color]="stepper.selectedIndex == 2 ? '#fff' : '#BFB274'">Step 3   </span></ng-template>
       <p>This content was rendered eagerly</p>
       <button mat-button matStepperPrevious>Back</button>
     </mat-step>
