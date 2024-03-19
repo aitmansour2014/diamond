@@ -33,22 +33,62 @@
     line-height: 20px;
     margin-bottom: 30px;
 }
- /* ::ng-deep .mat-step-header[aria-selected="true"]  {
-     background-color: #6e6848; 
-    border-radius: 32px;
-    width: 60%;
-    font-weight: 22px;
-    height: auto;
-    
-  }  */
 
-  ::ng-deep .mat-horizontal-stepper-header[aria-selected="true"] {
-    background-color: #6e6848 !important;
+/* Global stepper Body Style*/
+::ng-deep .mat-horizontal-content-container {
+    overflow: hidden;
+    border-radius: 15px 15px 15px 15px;
+    padding: 24px;
+    background-color: #000;
+} 
+
+
+/* Global stepper Header Steps-Bar Style*/
+::ng-deep .mat-horizontal-stepper-header-container {
+    background-color: #000 !important;
+    border-bottom: 2px solid #BFB274;
+    padding: 20px 0 20px 0;
+    border-radius: 0 0 15px 15px;
+   
+}
+/* Global stepper Header Step Horizontal Line Style*/
+::ng-deep .mat-stepper-horizontal-line {
+    border-top-color: #000;
+    border-top-style: dashed !important ;
+    border-top-width: 4px solid !important;
+    border-top-color: #fff !important;
+} 
+/* Exemple Step-Box Style
+*/
+/* Global stepper Header Step Horizontal Line Style*/
+
+::ng-deep .mat-horizontal-stepper-header[aria-selected="true"] {
+    background-color: #BFB274 !important;
     border-radius: 32px !important;
+    border: 2px solid rgba(255, 255, 255, 0.377);
     width: 60%;
     font-weight: 22px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    padding-left: 5px;
     height: auto;
 }
+
+
+/* Stepper Step-Box Hover Effect */
+
+::ng-deep .mat-horizontal-stepper-header:hover:not([aria-disabled]) {
+    background-color: #000 !important;
+    
+  }
+  
+  ::ng-deep .mat-horizontal-stepper-header:hover[aria-disabled] {
+    background-color: transparent !important;
+   
+  }
+
+/* Change Label Color When Tab is Selected */
+
 
 
   .mat-step-icon .mat-icon {
