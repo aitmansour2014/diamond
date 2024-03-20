@@ -48,7 +48,9 @@
     background-color: #000 !important;
     border-bottom: 2px solid #BFB274;
     padding: 20px 0 20px 0;
-    border-radius: 0 0 15px 15px;
+    border-radius: 15px 15px 15px 15px;
+    margin-bottom: 10px;
+    margin-top: 10px;
    
 }
 /* Global stepper Header Step Horizontal Line Style*/
@@ -63,7 +65,7 @@
 /* Global stepper Header Step Horizontal Line Style*/
 
 ::ng-deep .mat-horizontal-stepper-header[aria-selected="true"] {
-    background-color: #BFB274 !important;
+    background-color: #000 !important;
     border-radius: 32px !important;
     border: 2px solid rgba(255, 255, 255, 0.377);
     width: 60%;
@@ -77,24 +79,27 @@
 
 /* Stepper Step-Box Hover Effect */
 
-::ng-deep .mat-horizontal-stepper-header:hover:not([aria-disabled]) {
-    background-color: #000 !important;
-    
-  }
-  
-  ::ng-deep .mat-horizontal-stepper-header:hover[aria-disabled] {
-    background-color: transparent !important;
-   
-  }
+::ng-deep .mat-horizontal-stepper-header[aria-selected="true"]:hover {
+    background-color: #BFB274 !important;
+}
+
+
+/* Change Style In Done mode */
+
+::ng-deep .mat-horizontal-stepper-header[aria-selected="true"]:has(.mat-step-icon-state-done) {
+    background-color: greenyellow !important;
+}
+
 
 /* Change Label Color When Tab is Selected */
 
 
 
-  .mat-step-icon .mat-icon {
-    font-size: 27px;
+::ng-deep .mat-step-icon .mat-icon {
+    display: none;
+    /* font-size: 27px;
     height: 27px;
-    width: 27px;
+    width: 27px; */
   }
 
 /* .mat-step-icon {

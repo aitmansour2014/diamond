@@ -12,6 +12,40 @@
 .mat-horizontal-stepper-header .mat-step-icon {
   height: 50px;
   width: 50px;
+  transition: all 0.5s ease-in-out;
+  outline: 2px solid #BFB274;
+  outline-offset: 2px;
+}
+.mat-horizontal-stepper-header .mat-step-icon-selected {
+  height: 50px;
+  width: 50px;
+  transition: all 0.5s ease-in-out;
+  outline: 2px solid #fff;
+  outline-offset: 2px;
+}
+/* Change stepper Step Edit Icon Circle Image (edit mode)*/
+.mat-horizontal-stepper-header .mat-step-icon-state-edit {
+ background-color: chartreuse;
+ background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/White_check.svg/32px-White_check.svg.png");
+ background-size: 25px;
+ background-position-Y: 10px;
+ background-position-x: 13px;
+ transform: rotate(20deg);
+ background-repeat: no-repeat;
+ outline: 2px solid #fff;
+ outline-offset: 2px;
+}
+/* Change stepper Step Edit Icon Circle Image (done mode)*/
+.mat-horizontal-stepper-header .mat-step-icon-state-done {
+ background-color: chartreuse;
+ background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/White_check.svg/32px-White_check.svg.png");
+ background-size: 25px;
+ background-position-Y: 10px;
+ background-position-x: 13px;
+ transform: rotate(20deg);
+ background-repeat: no-repeat;
+ outline: 2px solid #fff;
+ outline-offset: 2px;
 }
 .mat-step-icon-content{
   font-size: 35px;
