@@ -1,0 +1,118 @@
+
+
+.form-content .form-items {
+    border: 3px solid #BFB274;
+    padding: 40px;
+    display: inline-block;
+    width: 100%;
+    min-width: 540px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    text-align: left;
+    -webkit-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+}
+.form-content h3 {
+    color: #BFB274;
+    text-align: left;
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.form-content h3.form-title {
+    margin-bottom: 30px;
+}
+
+.form-content p {
+    color: #BFB274;
+    text-align: left;
+    font-size: 17px;
+    font-weight: 300;
+    line-height: 20px;
+    margin-bottom: 30px;
+}
+
+/* Global stepper Body Style*/
+::ng-deep .mat-horizontal-content-container {
+    overflow: hidden;
+    border-radius: 15px 15px 15px 15px;
+    padding: 24px;
+    background-color: #000;
+} 
+
+
+/* Global stepper Header Steps-Bar Style*/
+::ng-deep .mat-horizontal-stepper-header-container {
+    background-color: #000 !important;
+    border-bottom: 2px solid #BFB274;
+    padding: 20px 0 20px 0;
+    border-radius: 15px 15px 15px 15px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+   
+}
+/* Global stepper Header Step Horizontal Line Style*/
+::ng-deep .mat-stepper-horizontal-line {
+    border-top-color: #000;
+    border-top-style: dashed !important ;
+    border-top-width: 4px solid !important;
+    border-top-color: #fff !important;
+} 
+/* Exemple Step-Box Style
+*/
+/* Global stepper Header Step Horizontal Line Style*/
+
+::ng-deep .mat-horizontal-stepper-header[aria-selected="true"] {
+    background-color: #000 !important;
+    border-radius: 32px !important;
+    border: 2px solid rgba(255, 255, 255, 0.377);
+    width: 60%;
+    font-weight: 22px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    padding-left: 5px;
+    height: auto;
+}
+
+
+/* Stepper Step-Box Hover Effect */
+
+::ng-deep .mat-horizontal-stepper-header[aria-selected="true"]:hover {
+    background-color: #BFB274 !important;
+}
+
+
+/* Change Style In Done mode */
+
+::ng-deep .mat-horizontal-stepper-header[aria-selected="true"]:has(.mat-step-icon-state-done) {
+    background-color: greenyellow !important;
+}
+
+
+/* Change Label Color When Tab is Selected */
+
+
+
+::ng-deep .mat-step-icon .mat-icon {
+    display: none;
+    /* font-size: 27px;
+    height: 27px;
+    width: 27px; */
+  }
+
+/* .mat-step-icon {
+    border-radius: 50%;
+    height: 100px;
+    width: 100px;
+    
+    position: relative;
+    color: var(--mat-stepper-header-icon-foreground-color);
+    background-color: var(--mat-stepper-header-icon-background-color);
+} */
+.mat-horizontal-stepper-header .mat-step-icon {
+    
+    height: 100px;
+    width: 100px;
+}

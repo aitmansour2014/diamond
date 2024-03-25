@@ -8,6 +8,8 @@ import { Calendar } from '@fullcalendar/core'
 import { DatePipe } from '@angular/common';
 import { CheckAvailibilityHostessService } from '../../services/check-availibility-hostess.service';
 
+import timeGridPlugin from '@fullcalendar/timegrid';
+
 interface Categorie1 {
   value: string;
   viewValue: string;
@@ -23,7 +25,7 @@ interface Categorie1 {
 })
 export class AbsencesComponent implements OnInit{
   //disponibilites: any[] = [];
-  plugins = [dayGridPlugin];
+  plugins = [dayGridPlugin, timeGridPlugin];
 
  // Liste des plugins à utiliser
  categorieAbbsence: Categorie1[] = [
@@ -38,7 +40,7 @@ export class AbsencesComponent implements OnInit{
     idHostesse: 1,
     dateStart: "2024-03-06T15:48:59",
     dateEnd: "2024-03-07T15:48:59",
-    category: " ",
+    category: "booking",
     reason: "Salam Aleicom " 
   },
   { 
@@ -71,10 +73,29 @@ export class AbsencesComponent implements OnInit{
     const events = this.convertirDisponibilitesEnEvenements(this.absences)
     console.log(events)
     const calendar = new Calendar(calendarEl, {
-      plugins: [dayGridPlugin],
+     navLinks:true,
+     editable: true,
+     
+     headerToolbar: {
+      left: 'prev,next today',
+      center: 'title',
+      right: 'dayGridMonth,timeGridWeek,timeGridDay,listWeek'
+    },
+
+
+      plugins: [ dayGridPlugin,
+        timeGridPlugin],
       initialView: 'dayGridMonth',
       weekends: false,
-      events:events
+      events:events,
+      eventClick: function(info) {
+        alert('Event: ' + info.event.title);
+        alert('Coordinates: ' + info.jsEvent.pageX + ',' + info.jsEvent.pageY);
+        alert('View: ' + info.view.type);
+    
+        // change the border color just for fun
+        info.el.style.borderColor = 'red';
+      }
     });
 
     calendar.render();
@@ -109,6 +130,9 @@ export class AbsencesComponent implements OnInit{
     return absences.map(absence => ({
       title: absence.category+" : " + absence.reason,
       start:  absence.dateStart,
+      textColor: absence.category==='booking' ? '#000' : '#fff',
+      backgroundColor: absence.category==='booking' ? '#0f0' : '#00f',
+      borderColor: absence.category==='booking' ? '#0f0' : '#00f',
       end:  absence.dateEnd
    }));  }
 
