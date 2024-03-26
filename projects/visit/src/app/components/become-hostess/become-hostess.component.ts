@@ -1,18 +1,37 @@
-import { NgIf } from '@angular/common';
+import { NgFor, NgIf } from '@angular/common';
 import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-become-hostess',
   standalone: true,
-  imports: [NgIf],
+  imports: [NgIf, NgFor],
   templateUrl: './become-hostess.component.html',
   styleUrl: './become-hostess.component.css'
 })
 export class BecomeHostessComponent {
   imghost: string = 'assets/hostesseimg.jpg';
   
+imgplus:string='assets/plus.png';
+
+images: string[] = ['', '', '', '', '']; 
+  
   fileName = ""
   imageUrl: any;
+  
+
+onFileSelected(files: FileList, index: number) {
+  const file = files.item(0);
+  if (file) {
+    // Read the file as a data URL
+    const reader = new FileReader();
+    reader.readAsDataURL(file);
+    reader.onload = () => {
+      // Store the data URL in the images array
+      this.images[index] = reader.result as string;
+    };
+  }
+}
+
   selectImage(event:any) {
     this.fileName = event.target.value
     console.log(event.target.files[0])

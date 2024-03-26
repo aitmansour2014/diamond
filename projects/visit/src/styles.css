@@ -1,9 +1,14 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Subrayada:wght@400;700&display=swap');
 
 body{
   background-image: url(https://media.istockphoto.com/vectors/polygonal-black-background-modern-design-with-geometric-planes-and-vector-id1168658342?k=20&m=1168658342&s=612x612&w=0&h=bULprN5E5rxSynUyWoyj-fpsSHBrhqPGdu84KSC9YrA=);
 }
 
+.title1 {
+  font-family: 'Montserrat Subrayada', sans-serif;
+  font-size: 1.5rem; /* Adjust the font-size as needed */
+  font-weight: 700; /* Use 700 for bold */
+}
 
 /* CSS */
 .button-48 {
@@ -76,7 +81,7 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 position: relative;
 padding: 15px 0 0;
 margin-top: 10px;
-width: 50%;
+width: 100%;
 }
 
 .form__field {
@@ -132,6 +137,72 @@ border-image-slice: 1;
 .form__field{
 &:required,&:invalid { box-shadow:none; }
 }
+
+
+
+
+.formw__group {
+position: relative;
+padding: 15px 0 0;
+margin-top: 10px;
+width: 70%;
+}
+
+.formw__field {
+font-family: 'Montserrat Alternates', sans-serif;
+width: 100%;
+border: 0;
+border-bottom: 2px solid #4F4B36;
+outline: 0;
+font-size: 1rem;
+color:#4F4B36;
+padding: 7px 0;
+background: transparent;
+transition: border-color 0.2s;
+
+&::placeholder {
+  color: transparent;
+}
+
+&:placeholder-shown ~ .formw__label {
+  font-size: 1rem;
+  cursor: text;
+  top: 20px;
+}
+}
+
+.formw__label {
+font-family: 'Montserrat Alternates', sans-serif;
+position: absolute;
+top: 0;
+display: block;
+transition: 0.2s;
+font-size: 1rem;
+color: #BFB274;
+}
+
+.formw__field:focus {
+~ .form__label {
+  position: absolute;
+  top: 0;
+  display: block;
+  transition: 0.2s;
+  font-size: 1rem;
+  color:#D8CD9B;
+  font-weight:300;    
+}
+padding-bottom: 6px;  
+font-weight: 300;
+border-width: 3px;
+border-image: linear-gradient(to right, #D8CD9B,#4F4B36);
+border-image-slice: 1;
+}
+/* reset input */
+.formw__field{
+&:required,&:invalid { box-shadow:none; }
+}
+
+
 :root {
 --primary-light: #8abdff;
 --primary: #6d5dfc;
@@ -193,4 +264,21 @@ color: #fff;
 .mat-step-header .mat-step-icon {
   background-color: rgba(192, 154, 30, 0.54);
   color: #fff;
+}
+
+
+/*checkbox*/
+input[type="checkbox"] {
+appearance: none;
+-webkit-appearance: none;
+width: 20px;
+height: 20px;
+background-color: transparent;
+border: 2px solid #BFB274;
+border-radius: 4px;
+}
+
+input[type="checkbox"]:checked {
+border-color: #bfb27467;
+background-color: #BFB274;
 }
