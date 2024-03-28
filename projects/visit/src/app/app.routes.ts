@@ -7,8 +7,10 @@ import { ContactComponent } from './components/contact/contact.component';
 import { LoginComponent } from './components/login/login.component';
 import { AbsencesComponent } from './components/absences/absences.component';
 import { ActivitiesComponent } from './components/activities/activities.component';
+import { HostesseComponent } from './components/hostesse/hostesse.component';
 
 export const routes: Routes = [
+    
     { path: 'home', component: HomeComponent },
     { path: 'becomeHostess', component:  BecomeHostessComponent },
     { path: 'agency', component:  AgencyComponent },

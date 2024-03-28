@@ -19,6 +19,9 @@ import {MatDatepickerModule} from '@angular/material/datepicker';
 import {MatNativeDateModule} from '@angular/material/core';
 import { FullCalendarModule } from '@fullcalendar/angular';
 import {MatStepperModule} from '@angular/material/stepper';
+import {MatToolbarModule} from '@angular/material/toolbar';
+import {MatSidenavModule} from '@angular/material/sidenav';
+import {MatListModule} from '@angular/material/list';
 
 
 @NgModule({
@@ -43,6 +46,9 @@ import {MatStepperModule} from '@angular/material/stepper';
     MatSortModule,
     MatTableModule,
     MatStepperModule,
+    MatToolbarModule,
+    MatSidenavModule,
+    MatListModule,
     FullCalendarModule
   ],
   exports: [
@@ -65,6 +71,9 @@ import {MatStepperModule} from '@angular/material/stepper';
     MatSortModule,
     MatTableModule,
     MatStepperModule,
+    MatToolbarModule,
+    MatSidenavModule,
+    MatListModule,
     FullCalendarModule
   ],
 })

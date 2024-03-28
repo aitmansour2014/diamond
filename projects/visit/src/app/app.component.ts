@@ -4,12 +4,13 @@ import { MobileNavComponent } from './components/Navbar/mobile-nav/mobile-nav.co
 import { DeskNavComponent } from './components/Navbar/desk-nav/desk-nav.component';
 import { SharedModuleModule } from './shared-module/shared-module.module';
 import { NgIf } from '@angular/common';
+import { HostesseComponent } from './components/hostesse/hostesse.component';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   standalone: true,
-  imports:[BecomeHostessComponent, MobileNavComponent,DeskNavComponent, SharedModuleModule, NgIf],
+  imports:[BecomeHostessComponent, MobileNavComponent,DeskNavComponent, SharedModuleModule, HostesseComponent, NgIf],
   styleUrl: './app.component.css'
 })
 export class AppComponent {

@@ -22,22 +22,24 @@
                 <form class="text-start ">
                     <h1 class="titleh3">Info Personal</h1>
                     <hr class="mt-2 mb-5">
+                    <Label class="mylabel">Gender 
+                    </Label>
                     <div class="mb-3 form-check">
-                        <Label class="mylabel">Gender :</Label>
+                        
                         <div class="row">
                             
                             <div class="col-md-4">
                                 <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                                <label class="form-check-label" for="exampleCheck1">Male</label>
+                                <label class="form-check-label mylabel pl-2" for="exampleCheck1">Male</label>
                                 
                             </div>
                             <div class="col-md-4">
                                 <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                                <label class="form-check-label" for="exampleCheck1">Femelle</label>
+                                <label class="form-check-label mylabel pl-2" for="exampleCheck1">Femelle</label>
                             </div>
                             <div class="col-md-4">
                                 <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                                <label class="form-check-label" for="exampleCheck1">Secret</label>
+                                <label class="form-check-label mylabel pl-2" for="exampleCheck1">Secret</label>
                             </div>
                         </div>
                     </div>
@@ -46,14 +48,14 @@
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="form__group field">
-                                    <input type="input" class="form__field" placeholder="first name" name="first name" id='first name' required />
-                                    <label for="first name" class="form__label">First name</label>
+                                    <input type="input" class="form__field" placeholder="firstName" name="firstName" id='firstName' required />
+                                    <label for="firstName" class="form__label">First name</label>
                                   </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form__group field">
-                                    <input type="input" class="form__field" placeholder="last name" name="last name" id='last name' required />
-                                    <label for="last name" class="form__label">Last name</label>
+                                    <input type="input" class="form__field" placeholder="lastName" name="lastName" id='lastName' required />
+                                    <label for="lastName" class="form__label">Last name</label>
                                   </div>
                             </div>
                         </div>
@@ -62,14 +64,14 @@
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="form__group field">
-                                    <input type="input" class="form__field" placeholder="Name" name="name" id='name' required />
-                                    <label for="name" class="form__label">Date of Birth</label>
+                                    <input type="input" class="form__field" placeholder="18-05-2002" name="dateOfBirth" id='dateOfBirth' required />
+                                    <label for="dateOfBirth" class="form__label">Date of Birth</label>
                                   </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form__group field">
-                                    <input type="input" class="form__field" placeholder="Name" name="name" id='name' required />
-                                    <label for="name" class="form__label">Phone</label>
+                                    <input type="input" class="form__field" placeholder="+2126.." name="phone" id='phone' required />
+                                    <label for="phone" class="form__label">Phone</label>
                                   </div>
                             </div>
                         </div>
@@ -90,7 +92,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="mb-3">
+                    <div class="mb-5">
                         <div class="row mb-2">
                             <div class="col-md-6">
                                 <div class="form__group field">
@@ -106,10 +108,10 @@
                             </div>
                         </div>
                     </div>
-                    <h1 class="text-start titleh3 mt-3">Info Body </h1>
+                    <h1 class="text-start titleh3 mt-5">Info Body </h1>
   
                     <hr class="mt-2 mb-5">
-                    <div class="mb-3">
+                    <div class="mb-5">
                         <div class="row mb-2">
                             <div class="col-md-4">
                                 <div class="form__group field">
@@ -144,7 +146,7 @@
                         </div>
                     </div>
                  
-                    <h1 class="text-start titleh3 mt-3">Language </h1>
+                    <h1 class="text-start titleh3 mt-5">Language </h1>
   
                     <hr class="mt-2 mb-5">
                     <div class="mb-3">
@@ -196,13 +198,13 @@
     <hr class="mt-2 mb-5">
   
     <div class="row text-center">
-        <div class="col-lg-3 col-md-4 col-6" *ngIf="imageUrl">
+        <div class="col-lg-3 col-md-4 col-12" *ngIf="imageUrl">
             <a href="#" class="d-block mb-4 h-100">
                 <img class="img-fluid img-thumbnail" [src]="imageUrl" alt="" *ngIf="imageUrl" style="width: 100%; height: auto; " alt="">
             </a>
         </div>
     
-        <div class="col-lg-3 col-md-4 col-6">
+        <div class="col-lg-3 col-md-4 col-12">
             <label for="selectFile" class="d-flex justify-content-center align-items-center mb-4 h-100" style="background-color: #BFB274;">
                 <i class="fas fa-plus-circle  fa-5x" ></i>
             </label>
@@ -214,7 +216,7 @@
         
         <div class="form-check m-3">
             <input type="checkbox" class="form-check-input" id="exampleCheck1">
-            <label class="form-check-label" for="exampleCheck1">Confirmation</label>
+            <label class="form-check-label mylabel pl-2" for="exampleCheck1">Confirmation</label>
           </div>
           <button type="submit" class="button-48 m-3" >Submit</button>
 
