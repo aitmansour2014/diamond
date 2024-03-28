@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat+Subrayada:wght@400;700&display=swap');
+@import 'vis-timeline/styles/vis-timeline-graph2d.css';
+
 
 body{
   background-image: url(https://media.istockphoto.com/vectors/polygonal-black-background-modern-design-with-geometric-planes-and-vector-id1168658342?k=20&m=1168658342&s=612x612&w=0&h=bULprN5E5rxSynUyWoyj-fpsSHBrhqPGdu84KSC9YrA=);

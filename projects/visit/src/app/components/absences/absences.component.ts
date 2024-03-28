@@ -1,4 +1,4 @@
-import { Component, ElementRef, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { Absences } from '../../model/absences.model';
 import { NgFor, NgIf } from '@angular/common';
 import { SharedModuleModule } from '../../shared-module/shared-module.module';
@@ -7,6 +7,9 @@ import { FullCalendarModule } from '@fullcalendar/angular';
 import { Calendar } from '@fullcalendar/core'
 import { DatePipe } from '@angular/common';
 import { CheckAvailibilityHostessService } from '../../services/check-availibility-hostess.service';
+import { Timeline } from 'vis-timeline/standalone';
+
+
 
 import timeGridPlugin from '@fullcalendar/timegrid';
 
@@ -25,8 +28,13 @@ interface Categorie1 {
 })
 export class AbsencesComponent implements OnInit{
   //disponibilites: any[] = [];
-  plugins = [dayGridPlugin, timeGridPlugin];
+  @ViewChild('timelineContainer') timelineContainer!: ElementRef;
 
+
+  plugins = [dayGridPlugin, timeGridPlugin];
+  events = [
+    { timestamp: new Date, title: 'title 5',description: 'This is the description of the event 5', id: 1  }
+  ];
  // Liste des plugins à utiliser
  categorieAbbsence: Categorie1[] = [
   {value: 'MALADIE', viewValue: 'Maladie'},
@@ -61,11 +69,34 @@ export class AbsencesComponent implements OnInit{
   }];
 
   constructor(private elementRef: ElementRef, private datePipe: DatePipe, private checkAvailibilityHostessService: CheckAvailibilityHostessService) {
-    
+ 
+  
   }
   ngOnInit(): void {
     this. calendrier()
    // throw new Error('Method not implemented.');
+   //const container = this.timelineContainer.nativeElement;
+  
+   
+  
+  }
+  ngAfterViewInit(): void {
+    if (this.timelineContainer.nativeElement) {
+      const container = this.timelineContainer.nativeElement;
+      const items = [
+        { id: 1, content: 'Pictures update', start: '2024-03-28T15:48:59' },
+        { id: 2, content: 'Notification', start: '2024-03-28T16:48:59' },
+        { id: 3, content: 'Profil update', start: '2024-03-28T12:48:59' },
+        { id: 4, content: 'Message received', start: '2024-03-28T10:48:59' }, // 8h00
+        { id: 5, content: 'Booking', start: '2024-03-27T15:48:59' }  // 13h30
+      ];
+      const options = {
+       
+      }; // Customize options as needed
+      const timeline = new Timeline(container, items, options);
+    } else {
+      console.error('timelineContainer.nativeElement est undefined.');
+    }
   }
   calendrier() {
     const calendarEl: HTMLElement = this.elementRef.nativeElement.querySelector('#calendar');
