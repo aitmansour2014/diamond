@@ -8,6 +8,8 @@ import { Calendar } from '@fullcalendar/core'
 import { DatePipe } from '@angular/common';
 import { CheckAvailibilityHostessService } from '../../services/check-availibility-hostess.service';
 import { Timeline } from 'vis-timeline/standalone';
+//import { DataSet } from 'vis-data';
+
 
 import timeGridPlugin from '@fullcalendar/timegrid';
 
@@ -78,84 +80,67 @@ export class AbsencesComponent implements OnInit{
    
   
   }
-  ngAfterViewInit(): void {
-    if (this.timelineContainer.nativeElement) {
-      const container = this.timelineContainer.nativeElement;
-      const items = new vis.DataSet([
-        { id: 1, content: 'Pictures update', start: '2024-03-28T15:48:59' },
-        { id: 2, content: 'Notification', start: '2024-03-28T16:48:59' },
-        { id: 3, content: 'Profil update', start: '2024-03-28T12:48:59' },
-        { id: 4, content: 'Message received', start: '2024-03-28T10:48:59' }, // 8h00
-        { id: 5, content: 'Booking', start: '2024-03-27T15:48:59' }  // 13h30
-      ]);
-      const options = {}; // Customize options as needed
-      const timeline = new vis.Timeline(container, items, options);
-  
-      // Add event listener to the timeline
-      timeline.on('select', (properties) => {
-        const selectedItemID = properties.items[0];
-        if (selectedItemID) {
-          const selectedItem = items.get(selectedItemID);
-          if (selectedItem) {
-            const itemElement = container.querySelector(`[data-item-id="${selectedItemID}"] .vis-item-content`);
-            if (itemElement) {
-              itemElement.style.color = 'red';
-            } else {
-              console.error('Item content element not found for selected item:', selectedItemID);
-            }
-          } else {
-            console.error('Selected item not found in the DataSet:', selectedItemID);
-          }
-        } else {
-          console.error('No item selected.');
-        }
-      });
-    } else {
-      console.error('timelineContainer.nativeElement is undefined.');
-    }
-  }
-  
   // ngAfterViewInit(): void {
   //   if (this.timelineContainer.nativeElement) {
   //     const container = this.timelineContainer.nativeElement;
-  //     const items = [
+  //     const items = new vis.DataSet([
   //       { id: 1, content: 'Pictures update', start: '2024-03-28T15:48:59' },
   //       { id: 2, content: 'Notification', start: '2024-03-28T16:48:59' },
   //       { id: 3, content: 'Profil update', start: '2024-03-28T12:48:59' },
   //       { id: 4, content: 'Message received', start: '2024-03-28T10:48:59' }, // 8h00
   //       { id: 5, content: 'Booking', start: '2024-03-27T15:48:59' }  // 13h30
-  //     ];
-  //     const options = {
-       
-  //     }; // Customize options as needed
-  //     const timeline = new Timeline(container, items, options);
-  //     // add event listener
-  //   //timeline.on('select', this.onSelect);
-  //   // Add a class to the specific item you want to style
-  //   timeline.on('select', function(properties) {
-  //     const selectedItemID = properties.items[0];
-  //     if (selectedItemID) {
-  //       const selectedItem = items.get(selectedItemID); // Get the selected item from the DataSet
-  //       if (selectedItem) {
-  //         const itemElement = document.querySelector(`[data-item-id="${selectedItemID}"] .vis-item-content`);
-  //         if (itemElement) {
-  //           itemElement.style.color = 'red';
+  //     ]);
+  //     const options = {}; // Customize options as needed
+  //     const timeline = new vis.Timeline(container, items, options);
+  
+  //     // Add event listener to the timeline
+  //     timeline.on('select', (properties) => {
+  //       const selectedItemID = properties.items[0];
+  //       if (selectedItemID) {
+  //         const selectedItem = items.get(selectedItemID);
+  //         if (selectedItem) {
+  //           const itemElement = container.querySelector(`[data-item-id="${selectedItemID}"] .vis-item-content`);
+  //           if (itemElement) {
+  //             itemElement.style.color = 'red';
+  //           } else {
+  //             console.error('Item content element not found for selected item:', selectedItemID);
+  //           }
   //         } else {
-  //           console.error('Item content element not found for selected item:', selectedItemID);
+  //           console.error('Selected item not found in the DataSet:', selectedItemID);
   //         }
   //       } else {
-  //         console.error('Selected item not found in the DataSet:', selectedItemID);
+  //         console.error('No item selected.');
   //       }
-  //     } else {
-  //       console.error('No item selected.');
-  //     }
-  //   });
-    
-    
+  //     });
   //   } else {
-  //     console.error('timelineContainer.nativeElement est undefined.');
+  //     console.error('timelineContainer.nativeElement is undefined.');
   //   }
   // }
+  
+  ngAfterViewInit(): void {
+    if (this.timelineContainer.nativeElement) {
+      const container = this.timelineContainer.nativeElement;
+      const items = [
+        { id: 1, content: 'Pictures update', start: '2024-03-28T15:48:59' },
+        { id: 2, content: 'Notification', start: '2024-03-28T16:48:59' },
+        { id: 3, content: 'Profil update', start: '2024-03-28T12:48:59' },
+        { id: 4, content: 'Message received', start: '2024-03-28T10:48:59' }, // 8h00
+        { id: 5, content: 'Booking', start: '2024-03-27T15:48:59' }  // 13h30
+      ];
+      const options = {
+       
+      }; // Customize options as needed
+      const timeline = new Timeline(container, items, options);
+      // add event listener
+    timeline.on('select', this.onSelect);
+    // Add a class to the specific item you want to style
+  
+    
+    
+    } else {
+      console.error('timelineContainer.nativeElement est undefined.');
+    }
+  }
   onSelect(properties: any): void {
     console.log('selected items: ' + properties.items);
     const selectedItem = properties.items;
