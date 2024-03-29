@@ -1,21 +1,21 @@
 <div class="navbar">
     <div class=" container" style="max-width: 1000px;">
-      <a class="button-48" routerLink="/home">Home</a>
-    <a class="button-48" routerLink="/booking">Booking</a>
-    <a class="button-48"  routerLink="/becomeHostess">Agency</a>
+      <a class="button-48" routerLink="/hostess/home">Home</a>
+    <a class="button-48" routerLink="/hostess/booking">Booking</a>
+    <a class="button-48"  routerLink="/hostess/becomeHostess">Agency</a>
     <img [src]="logoSrc" alt="Website Logo" class="logo">
     
-    <a class="button-48"  routerLink="/becomeHostess">Contact</a>
+    <a class="button-48"  routerLink="/hostess/becomeHostess">Contact</a>
     <a class="button-48" href="javascript:void(0);" class="icon" (click)="toggleMenu()" *ngIf="isMobileView">&#9776;</a>
-    <a class="button-48"  class="nav-link  ">login</a>
-    <a  class="button-48"  routerLink="/becomeHostess">langauge</a>
+    <a class="button-48"  routerLink="/admin/absence" class="nav-link  ">login</a>
+    <a  class="button-48"  routerLink="/hostess/login">langauge</a>
     </div>
     
    
   </div>
   
   <div class="hostess-container">
-    <a class="button-48"  routerLink="/becomeHostess" class="hostess-Hostesse">Become Hostesses</a>
+    <a class="button-48"  routerLink="/hostess/becomeHostess" class="hostess-Hostesse">Become Hostesses</a>
     
   </div>
   <router-outlet></router-outlet>

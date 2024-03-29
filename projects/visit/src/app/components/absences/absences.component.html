@@ -17,7 +17,7 @@
         <div class="card-header">Ajouter une Absence</div>
         <div class="card-body">
           
-          <p class="card-text">
+          <div class="card-text">
             <mat-form-field class="form__group fieldmt-2">
               <mat-label>Catégorie de l'absence</mat-label>
               <mat-select  #categorie class=" form__field">
@@ -26,32 +26,32 @@
                 }
               </mat-select>
             </mat-form-field>
-          </p>
+          
           <!-- <p class="card-text">
             <mat-form-field class="example-full-width">
               <mat-label>Raison</mat-label>
               <input matInput placeholder="Meeting" #raison>
             </mat-form-field>
           </p> -->
-          <div class="m-auto formw__group field mt-2">
+          <div class="m-auto formw__group field mt-2 ms-2  mb-3 " style="width: 97%;">
           
             <input matInput class="formw__field " placeholder="Meeting" #raison>
             <label class="formw__label">Raison</label>
           </div>
-          <div class="m-auto formw__group field mt-2">
+          <div class="m-auto formw__group field mt-2 ms-2  mb-3 " style="width: 97%;">
           
             <input type="datetime-local" class="formw__field " #dateDebut required>
             <label class="formw__label">Date de début</label>
           </div>
           
           
-          <div class="m-auto formw__group field mt-2">
+          <div class="m-auto formw__group field mt-2 ms-2  mb-3 " style="width: 97%;">
             
             <input type="datetime-local" class="formw__field " #dateFin required>
             <label class="formw__label">Date de Fin</label>
           </div>
           <button (click)="ajouterAbsence(dateDebut.value, dateFin.value, raison.value , categorie.value)" class="button-48 mt-2 dgcard-footer">ajouter</button>
-
+        </div>
           <!-- <h2 class="card-title my-3" >Date de début</h2>
           <p class="card-text">
             

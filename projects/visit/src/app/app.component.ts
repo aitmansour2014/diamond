@@ -6,11 +6,13 @@ import { SharedModuleModule } from './shared-module/shared-module.module';
 import { NgIf } from '@angular/common';
 import { HostesseComponent } from './components/hostesse/hostesse.component';
 
+import { RouterModule } from '@angular/router';
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   standalone: true,
-  imports:[BecomeHostessComponent, MobileNavComponent,DeskNavComponent, SharedModuleModule, HostesseComponent, NgIf],
+  imports:[BecomeHostessComponent, MobileNavComponent,DeskNavComponent, SharedModuleModule, HostesseComponent, NgIf,RouterModule],
   styleUrl: './app.component.css'
 })
 export class AppComponent {
